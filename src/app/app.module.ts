@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth.guard';
 import { FormComponent } from './form/form.component';
@@ -24,7 +24,7 @@ import { Store, StoreModule } from '@ngrx/store';
     HttpClientModule,
     StoreModule.forRoot({}),
   ],
-  providers: [Store,AuthGuard],
+  providers: [Store,AuthGuard,HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
