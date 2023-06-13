@@ -32,7 +32,7 @@ export class FormComponent {
     );
     if (this.myForm.valid) {
       const formValue = this.myForm.value;
-      console.log(formValue); // Handle form data
+      // console.log(formValue); // Handle form data
     }
   }
 
