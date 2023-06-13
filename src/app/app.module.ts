@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth.guard';
 import { FormComponent } from './form/form.component';
+import { Store, StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,10 @@ import { FormComponent } from './form/form.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({}),
   ],
-  providers: [AuthGuard],
+  providers: [Store,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
