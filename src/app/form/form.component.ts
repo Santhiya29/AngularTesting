@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent {
-  myForm!: FormGroup ;
+  myForm: any ;
   isData : boolean = true;
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiService, private router: Router) {}
