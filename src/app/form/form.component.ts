@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class FormComponent {
   myForm!: FormGroup ;
+  isData : boolean = true;
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiService, private router: Router) {}
 
@@ -34,6 +35,7 @@ export class FormComponent {
     if (this.myForm.valid) {
       const formValue = this.myForm.value;
       // console.log(formValue); // Handle form data
+      this.router.navigate(['/login']);
     }
   }
 
