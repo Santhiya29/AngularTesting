@@ -33,8 +33,7 @@ export class FormComponent {
     );
     if (this.myForm.valid) {
       const formValue = this.myForm.value;
-      console.log(formValue); // Handle form data
-      this.router.navigate(['login'])
+      // console.log(formValue); // Handle form data
     }
   }
 
