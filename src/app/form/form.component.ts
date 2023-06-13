@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../service/api.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { ApiService } from '../service/api.service';
 export class FormComponent {
   myForm!: FormGroup ;
 
-  constructor(private formBuilder: FormBuilder, private apiService: ApiService) {}
+  constructor(private formBuilder: FormBuilder, private apiService: ApiService, private router: Router) {}
 
   ngOnInit() {
     this.myForm = this.formBuilder.group({
@@ -33,6 +34,7 @@ export class FormComponent {
     if (this.myForm.valid) {
       const formValue = this.myForm.value;
       console.log(formValue); // Handle form data
+      this.router.navigate(['login'])
     }
   }
 
