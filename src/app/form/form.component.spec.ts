@@ -1,7 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormComponent } from './form.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
 
 describe('FormComponent', () => {
   let component: FormComponent;
@@ -9,8 +10,9 @@ describe('FormComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports:[HttpClientModule, ReactiveFormsModule],
-      declarations: [FormComponent]
+      imports:[HttpClientModule, ReactiveFormsModule, StoreModule.forRoot({}, {}),],
+      declarations: [FormComponent],
+     
     });
     fixture = TestBed.createComponent(FormComponent);
     component = fixture.componentInstance;
